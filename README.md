@@ -2,12 +2,12 @@
 This project focuses on Identity Governance &amp; Administration (IGA) and lifecycle management (Joiner-Mover-Leaver) using an enterprise identity directory structure, completely independent of cloud storage buckets.
 
 
-# Part 1: Designing the Automated JML Lifecycle Workflow
+## Part 1: Designing the Automated JML Lifecycle Workflow
 
 The recommended design uses Workday as the authoritative HR System of Record and Microsoft Entra ID as the central identity and access-control platform. Access should be granted primarily through role/attribute-based groups.
 
 
-## The Joiner — Automated Onboarding
+### The Joiner — Automated Onboarding
    
   1. Trigger Source:
 
@@ -45,7 +45,7 @@ The recommended design uses Workday as the authoritative HR System of Record and
      IT does not manually create accounts or assign individual permissions. Access is derived from authoritative HR attributes and approved roles.
 
 
-## The Mover — Automated Department/Role Transfer
+### The Mover — Automated Department/Role Transfer
 
   1. Trigger Source:
 
@@ -82,7 +82,7 @@ The recommended design uses Workday as the authoritative HR System of Record and
      This prevents permission creep, where employees retain privileges from previous positions.
 
 
-## The Leaver — Automated Offboarding/Kill-Switch
+### The Leaver — Automated Offboarding/Kill-Switch
 
   1. Trigger Source:
 
@@ -112,9 +112,9 @@ The recommended design uses Workday as the authoritative HR System of Record and
 
 
 
-# Part 2: Performing an Access Certification & Audit Campaign
+## Part 2: Performing an Access Certification & Audit Campaign
 
-## Detailed Audit Decisions
+### Detailed Audit Decisions
 
   **User Account: j.doe@omnicorp.com**
   
@@ -182,9 +182,9 @@ The recommended design uses Workday as the authoritative HR System of Record and
   Justification: Remove Sales CRM privilege and retain Finance access appropriate to the new role.
 
 
-# Part 3: Using a cloud identity provider environment such as Microsoft Entra ID to build an automated group-based lifecycle structure, provision a test contractor, assign group-based permissions, and execute an instant offboarding kill-switch.
+## Part 3: Using a cloud identity provider environment such as Microsoft Entra ID to build an automated group-based lifecycle structure, provision a test contractor, assign group-based permissions, and execute an instant offboarding kill-switch.
 
-## Step 1: Creating a Lifecycle Security Group
+### Step 1: Creating a Lifecycle Security Group
 
 > Instead of managing permissions user-by-user (which leads to orphaned accounts and permission creep), enterprise governance requires group-based access control.
 
@@ -206,7 +206,7 @@ The recommended design uses Workday as the authoritative HR System of Record and
 <img width="1350" height="493" alt="image" src="https://github.com/user-attachments/assets/1da780b4-4770-40d0-95e9-91c646f79716" />
 
 
-## Step 2: Provisioning a Test Lifecycle User (The Joiner)
+### Step 2: Provisioning a Test Lifecycle User (The Joiner)
 
 - Simulating a new contractor joining OmniCorp under a governance-controlled identity profile.
 - In the left-hand navigation menu (default directory) , click on Users > All users.
@@ -232,7 +232,7 @@ The recommended design uses Workday as the authoritative HR System of Record and
 > The user is now officially provisioned and automatically linked to the contractor security group.
 
 
-## Step 3: Mapping Group-Based Resource Access (Simulating Entitlements)
+### Step 3: Mapping Group-Based Resource Access (Simulating Entitlements)
 
 > Demonstrating how permissions scale securely via groups rather than individual assignments.
 
@@ -252,7 +252,7 @@ The recommended design uses Workday as the authoritative HR System of Record and
 > Governance Takeaway: Any user added to SG-Temporary-Contractors instantly inherits access to this application without needing direct, manual permissions.
 
 
-## Step 5: Execute the Instant Offboarding (The Leaver / Kill-Switch)
+### Step 4: Execute the Instant Offboarding (The Leaver / Kill-Switch)
 
 > Simulating the end of the contractor's lifecycle when their contract terminates or audit flags require an immediate lockdown.
 
