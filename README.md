@@ -1,4 +1,4 @@
-# Identity-Governance-Administration-IGA
+# Identity-Governance-Administration-IGA-In-Azure
 This project focuses on Identity Governance &amp; Administration (IGA) and lifecycle management (Joiner-Mover-Leaver) using an enterprise identity directory structure, completely independent of cloud storage buckets.
 
 
@@ -236,12 +236,24 @@ The recommended design uses Workday as the authoritative HR System of Record and
 
 > Demonstrating how permissions scale securely via groups rather than individual assignments.
 
-- In the Entra ID menu, navigate to Enterprise applications (or App registrations if testing application permissions).
+- In the Entra ID menu, navigate to Enterprise applications (or App registrations).
 
   <img width="1362" height="492" alt="image" src="https://github.com/user-attachments/assets/6ef551f1-512f-4ef9-9492-d86aede3cc52" />
 
-- Select a test application or simulation resource connected to your tenant (e.g., a mock SaaS dashboard or internal web app).
-- Click on Users and groups under that application's configuration.
+- Select a test application or simulation resource connected to your tenant (in this case there is no application so had to create one).
+
+  > To create, Navigate to Entra ID > Click on App Registration > New Registration > input the name > choose what you need the account to support > click on register
+
+  <img width="1363" height="583" alt="image" src="https://github.com/user-attachments/assets/7c982b53-917f-453a-9de5-ddae12a00c5f" />
+  
+- Go back to Enterprise applications > click on application created
+
+  <img width="1359" height="583" alt="image" src="https://github.com/user-attachments/assets/b6f1f6df-8ec5-4202-bd4f-6596d0ca2511" />
+
+- Click on Assign Users and groups under that application's configuration.
+
+  <img width="1365" height="586" alt="image" src="https://github.com/user-attachments/assets/8be1db87-ccc1-439a-843c-3e7484a31d0e" />
+
 - Click + Add user/group:
 
       Under Users, select the group SG-Temporary-Contractors that you created in Step 2.
